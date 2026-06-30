@@ -1,3 +1,9 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'http://example.org/'
+languageCode = 'ko-kr'          # 한국어 설정
+title = '가이드 문서'     # 사이트 타이틀
+theme = 'hugo-book'             # 🎯 다운받은 테마 이름 지정!
+
+[params]
+  # hugo-book 테마 고유의 옵션들 설정
+  # BookLogo = 'images/logo.png'  # 로고 이미지 경로 (선택)
+  BookMenuBundle = true         # 메뉴 구조 자동 바인딩
