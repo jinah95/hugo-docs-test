@@ -7,9 +7,10 @@ public_folder: "/uploads"
 collections:
   - name: "posts"
     label: "블로그 포스트 관리"
-    folder: "content"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
+    format: "toml-frontmatter"
     fields:
       - { label: "제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
