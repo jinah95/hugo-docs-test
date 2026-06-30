@@ -1,0 +1,16 @@
+backend:
+  name: github
+  repo: jinah95/hugo-docs-test
+  branch: main
+media_folder: "static/uploads"
+public_folder: "/uploads"
+collections:
+  - name: "posts"
+    label: "블로그 포스트 관리"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "작성일자", name: "date", widget: "datetime" }
+      - { label: "본문 내용", name: "body", widget: "markdown" }
