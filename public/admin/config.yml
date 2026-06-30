@@ -5,9 +5,13 @@ backend:
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
-  - name: "posts"
-    label: "블로그 포스트 관리"
-    folder: "content/posts"
+  - name: "docs"
+    label: "가이드 문서 관리"
+    folder: "content/docs"
+    # 트리 구조(중첩 경로) 활성화
+    type: "nested"
+    # 새 문서 추가 시 저장될 경로 파일 규칙 지정
+    path: "{{dir}}/{{slug}}"
     create: true
     slug: "{{slug}}"
     format: "toml-frontmatter"

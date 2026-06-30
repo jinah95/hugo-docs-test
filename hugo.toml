@@ -4,7 +4,7 @@ title = '가이드 문서'     # 사이트 타이틀
 theme = 'hugo-book'             # 🎯 다운받은 테마 이름 지정!
 
 [params]
-  BookSection = 'posts'
+  BookSection = 'docs'
   # hugo-book 테마 고유의 옵션들 설정
   # BookLogo = 'images/logo.png'  # 로고 이미지 경로 (선택)
-  BookMenuBundle = true         # 메뉴 구조 자동 바인딩
+  BookMenuBundle = false         # 메뉴 구조 자동 바인딩 - 중첩 파일 트리 구조 그대로 사이드바 랜더링 위해 false
