@@ -13,10 +13,11 @@ collections:
     type: "nested"
     nested:
       depth: 5 # 최대 5단계 하위 폴더까지 트리로 표시하겠다는 설정
+    path: "{{dir}}/{{slug}}"
     slug: "{{slug}}"
     extension: "md"
     format: "toml-frontmatter"
-
+    meta: { path: { widget: "hidden", index: 0 } }
     fields:
       - { label: "제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
