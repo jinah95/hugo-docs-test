@@ -11,6 +11,8 @@ collections:
     create: true
     # 트리 구조(중첩 경로) 활성화
     type: "nested"
+    nested:
+      depth: 5 # 최대 5단계 하위 폴더까지 트리로 표시하겠다는 설정
     # 새 문서 추가 시 저장될 경로 파일 규칙 지정
     path: "{{dir}}/{{slug}}"
     slug: "{{slug}}"
