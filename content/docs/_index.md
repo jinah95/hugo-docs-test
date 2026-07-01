@@ -1,7 +1,7 @@
 +++
 title = "가이드북 메인 페이지"
 date = 2026-07-01T09:00:00+09:00
-redirect_to: "docs/"
+redirect_to = "docs/"
 +++
 
 ## 환영합니다! 👋
