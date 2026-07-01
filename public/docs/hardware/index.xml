@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>안녕하세요~ on 가이드 문서</title>
+		<title>하드웨어 가이드 on 가이드 문서</title>
 		<link>http://localhost:1313/docs/hardware/</link>
-		<description>Recent content in 안녕하세요~ on 가이드 문서</description>
+		<description>Recent content in 하드웨어 가이드 on 가이드 문서</description>
 		<generator>Hugo</generator>
 		<language>ko-kr</language>
 		
 		
 		
 		
-			<lastBuildDate></lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 15:31:00 +0900</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/docs/hardware/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>캘리브레이션 </title>
+				<link>http://localhost:1313/docs/hardware/calibration/</link>
+				<pubDate>Wed, 01 Jul 2026 15:31:00 +0900</pubDate>
+				<guid>http://localhost:1313/docs/hardware/calibration/</guid>
+				<description>&lt;h2 id=&#34;캘리브레이션&#34;&gt;캘리브레이션&lt;a class=&#34;anchor&#34; href=&#34;#%ec%ba%98%eb%a6%ac%eb%b8%8c%eb%a0%88%ec%9d%b4%ec%85%98&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;스캐너가 잘 안 맞거나, 떨어졌거나, 최초 설치시&lt;/p&gt;</description>
+			</item>
 	</channel>
 </rss>

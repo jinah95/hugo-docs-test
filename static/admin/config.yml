@@ -9,6 +9,8 @@ collections:
     label: "📚 전체 가이드북 관리"
     folder: "content/docs"
     create: true
+    extension: "md"
+    format: "toml-frontmatter"
 
     # 🎯 [치트키 1] 복잡한 중복 에러의 주범인 meta.path 설정을 과감히 지우거나
     # 아래처럼 slug 자체에 '카테고리 경로'가 변수로 결합되도록 길을 완전히 터줍니다.
