@@ -6,11 +6,20 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
   - name: "docs"
-    label: "📚 전체 가이드북 관리" # 👈 왼쪽 사이드바에는 이거 딱 하나만 노출시킵니다.
+    label: "📚 전체 가이드북 관리"
     folder: "content/docs"
     create: true
+
+    # 🎯 [핵심 추가] depth를 사용할 때 서브 폴더 경로를 생성/추적해 주는 메타 데이터 필드입니다.
+    # index_file 설정을 주면 폴더 대문(_index.md)과 일반 가이드(.md)를 알아서 구분해 줍니다.
     nested:
-      depth: 5 # 최대 5단계 폴더 구조까지 허용
+      depth: 5
+    meta:
+      {
+        path:
+          { label: "카테고리 경로", widget: "string", index_file: "_index" },
+      }
+
     summary: "{{title}}"
     fields:
       - { label: "제목", name: "title", widget: "string" }
