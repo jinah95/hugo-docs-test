@@ -16,6 +16,8 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "toml-frontmatter"
+    meta:
+      { path: { label: "부모 폴더 선택 (경로)", index: 0, widget: "string" } }
     fields:
       - { label: "제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
