@@ -40,8 +40,7 @@ collections:
           collection: "docs_software", # 내 폴더(software) 컬렉션을 참조
           search_fields: ["title"], # 검색 기준
           value_field: "weight", # 선택 시 저장될 값 (여기는 매핑용)
-          summary: "{{#failed_to_match_hugo_index}}{{fields.weight}} | {{fields.title}}{{/failed_to_match_hugo_index}}{{#is_index}}🏠 [Main/Home] {{fields.title}}{{/is_index}}", # 드롭다운에 표시될 값 (여기는 보여주기용)
-          # display_fields: ["weight", "title"], # 🌟 [핵심] 드롭다운에 "30 | 소프트웨어 시작하기" 형태로 출력!
+          display_fields: ["weight", "title"], # 🌟 [핵심] 드롭다운에 "30 | 소프트웨어 시작하기" 형태로 출력!
           required: false,
           description: "💡 현재 등록된 다른 문서들의 순서를 확인하는 창입니다. (여기서 값을 골라도 실제 순서가 바뀌지는 않으며, 아래 '진짜 순서 입력' 칸에 적을 숫자를 참고하는 용도로 쓰세요!)",
         }
