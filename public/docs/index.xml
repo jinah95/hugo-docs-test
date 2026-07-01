@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>나의 무적 가이드북 on 가이드 문서</title>
+		<title>가이드북 메인 페이지 on 가이드 문서</title>
 		<link>http://localhost:1313/docs/</link>
-		<description>Recent content in 나의 무적 가이드북 on 가이드 문서</description>
+		<description>Recent content in 가이드북 메인 페이지 on 가이드 문서</description>
 		<generator>Hugo</generator>
 		<language>ko-kr</language>
 		
