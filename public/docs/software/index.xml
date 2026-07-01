@@ -10,16 +10,9 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Jul 2026 15:29:00 +0900</lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 14:43:00 +0900</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/docs/software/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>저장 경로 및 환경 변수 설정</title>
-				<link>http://localhost:1313/docs/software/install/</link>
-				<pubDate>Wed, 01 Jul 2026 15:29:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/software/install/</guid>
-				<description>&lt;h1 id=&#34;저장-경로-및-환경-변수-설정&#34;&gt;저장 경로 및 환경 변수 설정&lt;a class=&#34;anchor&#34; href=&#34;#%ec%a0%80%ec%9e%a5-%ea%b2%bd%eb%a1%9c-%eb%b0%8f-%ed%99%98%ea%b2%bd-%eb%b3%80%ec%88%98-%ec%84%a4%ec%a0%95&#34;&gt;#&lt;/a&gt;&lt;/h1&gt;</description>
-			</item>
 			<item>
 				<title>소프트웨어 시작하기</title>
 				<link>http://localhost:1313/docs/software/intro/</link>

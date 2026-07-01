@@ -6,103 +6,50 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
   - name: "docs"
-    label: "📚 전체 가이드북 관리"
+    label: "가이드 문서 관리"
     folder: "content/docs"
     create: true
-    slug: "{{fields.category_path}}/{{fields.file_name}}"
-
-    # 🎯 [치트키] 목록 화면에 그룹 필터를 줍니다.
-    # 이렇게 해두면 목록 화면 왼쪽에 카테고리별로 필터링/그룹핑할 수 있는 UI가 생성됩니다!
-    view_groups:
-      - label: "📂 카테고리별 보기"
-        field: "category_path"
-        # 만약 루트(_index.md 등)를 따로 표시하고 싶다면 아래 패턴도 인식합니다.
-        # pattern: '(?P<value>.*)'
-
-    # 목록 뷰 텍스트도 좀 더 알아보기 쉽게 변경
-    summary: "[순서: {{fields.weight}}] {{fields.title}} (파일명: {{fields.file_name}})"
-
+    # 트리 구조(중첩 경로) 활성화
+    nested: { depth: 1 }
+    path: "{{slug}}"
+    slug: "{{slug}}"
+    extension: "md"
+    format: "toml-frontmatter"
     fields:
-      - {
-          label: "📂 카테고리 폴더명 (영문)",
-          name: "category_path",
-          widget: "string",
-          hint: "예: software, hardware, faq / 루트에 둘 거면 빈칸",
-        }
-      - {
-          label: "💾 저장될 파일명 (영문)",
-          name: "file_name",
-          widget: "string",
-          hint: "일반 문서는 'install' 등 / 새 폴더 대문은 반드시 '_index' 입력",
-        }
-      - { label: "📝 화면에 보일 제목", name: "title", widget: "string" }
+      - { label: "제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
+      - { label: "본문 내용", name: "body", widget: "markdown" }
+
+  - name: "docs_software"
+    label: "소프트웨어 가이드"
+    folder: "content/docs/software" # 🎯 타겟 폴더를 software 내부로 고정!
+    create: true
+    path: "{{slug}}"
+    slug: "{{slug}}"
+    extension: "md"
+    format: "toml-frontmatter"
+    fields:
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "작성일자", name: "date", widget: "datetime" }
+      - { label: "본문 내용", name: "body", widget: "markdown" }
+      # 🎯 [진짜 치트키] 다른 문서들의 순서와 제목을 실시간으로 가져와 보여주는 드롭다운
       - {
-          label: "사이드바 순서 (weight)",
+          label: "📌 [참고] 기존 문서 순서 목록 확인",
+          name: "current_docs_reference",
+          widget: "relation",
+          collection: "docs_software", # 내 폴더(software) 컬렉션을 참조
+          search_fields: ["title"], # 검색 기준
+          value_field: "weight", # 선택 시 저장될 값 (여기는 매핑용)
+          display_fields: ["weight", "title"], # 🌟 [핵심] 드롭다운에 "30 | 소프트웨어 시작하기" 형태로 출력!
+          required: false,
+          description: "💡 현재 등록된 다른 문서들의 순서를 확인하는 창입니다. (여기서 값을 골라도 실제 순서가 바뀌지는 않으며, 아래 '진짜 순서 입력' 칸에 적을 숫자를 참고하는 용도로 쓰세요!)",
+        }
+
+      # ✍️ 위 드롭다운을 보고 "아하, 저게 30번이네? 난 40번 적어야지" 하고 입력하는 진짜 칸
+      - {
+          label: "🔢 진짜 사이드바 노출 순서 (숫자 직접 입력)",
           name: "weight",
           widget: "number",
           value_type: "int",
-          default: 10,
+          default: 50,
         }
-      - {
-          label: "📁 하위 문서 접기 (BookCollapseSection)",
-          name: "bookCollapseSection",
-          widget: "boolean",
-          default: true,
-        }
-      - {
-          label: "✨ 카테고리 강조 스타일 (BookFlatSection)",
-          name: "bookFlatSection",
-          widget: "boolean",
-          default: true,
-        }
-      - { label: "본문 내용", name: "body", widget: "markdown" }
-# collections:
-#   - name: "docs"
-#     label: "가이드 문서 관리"
-#     folder: "content/docs"
-#     create: true
-#     # 트리 구조(중첩 경로) 활성화
-#     nested: { depth: 1 }
-#     path: "{{slug}}"
-#     slug: "{{slug}}"
-#     extension: "md"
-#     format: "toml-frontmatter"
-#     fields:
-#       - { label: "제목", name: "title", widget: "string" }
-#       - { label: "작성일자", name: "date", widget: "datetime" }
-#       - { label: "본문 내용", name: "body", widget: "markdown" }
-
-#   - name: "docs_software"
-#     label: "소프트웨어 가이드"
-#     folder: "content/docs/software" # 🎯 타겟 폴더를 software 내부로 고정!
-#     create: true
-#     path: "{{slug}}"
-#     slug: "{{slug}}"
-#     extension: "md"
-#     format: "toml-frontmatter"
-#     fields:
-#       - { label: "제목", name: "title", widget: "string" }
-#       - { label: "작성일자", name: "date", widget: "datetime" }
-#       - { label: "본문 내용", name: "body", widget: "markdown" }
-#       # 🎯 [진짜 치트키] 다른 문서들의 순서와 제목을 실시간으로 가져와 보여주는 드롭다운
-#       - {
-#           label: "📌 [참고] 기존 문서 순서 목록 확인",
-#           name: "current_docs_reference",
-#           widget: "relation",
-#           collection: "docs_software", # 내 폴더(software) 컬렉션을 참조
-#           search_fields: ["title"], # 검색 기준
-#           value_field: "weight", # 선택 시 저장될 값 (여기는 매핑용)
-#           display_fields: ["weight", "title"], # 🌟 [핵심] 드롭다운에 "30 | 소프트웨어 시작하기" 형태로 출력!
-#           required: false,
-#           description: "💡 현재 등록된 다른 문서들의 순서를 확인하는 창입니다. (여기서 값을 골라도 실제 순서가 바뀌지는 않으며, 아래 '진짜 순서 입력' 칸에 적을 숫자를 참고하는 용도로 쓰세요!)",
-#         }
-
-#       # ✍️ 위 드롭다운을 보고 "아하, 저게 30번이네? 난 40번 적어야지" 하고 입력하는 진짜 칸
-#       - {
-#           label: "🔢 진짜 사이드바 노출 순서 (숫자 직접 입력)",
-#           name: "weight",
-#           widget: "number",
-#           value_type: "int",
-#           default: 50,
-#         }
