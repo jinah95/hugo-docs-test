@@ -10,22 +10,43 @@ collections:
     folder: "content/docs"
     create: true
 
-    # 🎯 [핵심 추가] depth를 사용할 때 서브 폴더 경로를 생성/추적해 주는 메타 데이터 필드입니다.
-    # index_file 설정을 주면 폴더 대문(_index.md)과 일반 가이드(.md)를 알아서 구분해 줍니다.
+    # 🎯 [핵심 1] slug 구조를 지정합니다.
+    # 폴더 대문(_index)이 아닐 때는 일반 파일명({{slug}})으로 저장되도록 길을 터줍니다.
+    slug: "{{slug}}"
+
     nested:
       depth: 5
+
+    # 🎯 [핵심 2] meta path 설정을 유지하되, 폴더 안에서 일반 문서 생성이 가능하도록 동기화합니다.
     meta:
       {
         path:
-          { label: "카테고리 경로", widget: "string", index_file: "_index" },
+          {
+            label: "카테고리 경로 (예: software 또는 software/sub)",
+            widget: "string",
+            index_file: "_index",
+          },
       }
 
     summary: "{{title}}"
     fields:
-      - { label: "제목", name: "title", widget: "string" }
+      # 🎯 [핵심 3] 파일명(Slug)을 직접 결정할 수 있게 필드를 노출해 줍니다.
+      # 일반 문서를 만들 때는 여기에 'install'이나 'usage' 같은 영문 파일명을 적어주면 됩니다.
+      # 만약 새 폴더를 만들고 싶다면 파일명을 '_index'라고 적어주면 됩니다.
+      - {
+          label: "💾 저장될 파일명 (영문/숫자)",
+          name: "title",
+          widget: "string",
+          hint: "일반 문서는 'intro', 'step1' 등 / 새 폴더 대문은 '_index' 입력",
+        }
+      - {
+          label: "📝 화면에 보일 제목",
+          name: "display_title",
+          widget: "string",
+        }
       - { label: "작성일자", name: "date", widget: "datetime" }
       - {
-          label: "사이드바 순서",
+          label: "사이드바 순서 (weight)",
           name: "weight",
           widget: "number",
           value_type: "int",
