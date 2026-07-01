@@ -1,0 +1,50 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches: ["main"] # main 브랜치에 코드가 푸시되면 자동으로 실행됩니다.
+  workflow_dispatch: # 깃허브 웹 화면에서 수동으로 배포 버튼을 누르고 싶을 때를 위한 옵션입니다.
+
+# 깃허브 배포 전용 API를 사용하기 위해 보안 토큰에 권한을 부여하는 정석 설정입니다.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동일한 배포가 동시에 여러 번 실행되면, 이전 배포를 안전하게 제어(동시성 제어)합니다.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true # hugo-book 테마가 서브모듈로 엮여있을 때를 대비한 안전장치입니다.
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest" # 언제나 안정적인 최신 버전의 Hugo를 사용합니다.
+          extended: true # SCSS 컴파일러가 내장된 extended 버전을 사용해 hugo-book 테마 깨짐을 방지합니다.
+
+      - name: Run Hugo Build
+        run: hugo --gc --minify # 🚀 가비지 컬렉터를 돌리고 코드를 압축(Minify)하여 정적 파일을 빌드합니다.
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "public" # 빌드 결과물이 저장된 'public' 폴더를 깃허브 배포 엔진으로 Toss 합니다.
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # 최종적으로 깃허브 서버에 내 사이트를 라이브로 배포합니다.

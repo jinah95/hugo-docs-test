@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Jul 2026 14:43:00 +0900</lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 16:01:00 +0900</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/docs/software/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -33,6 +33,13 @@
 				<pubDate>Wed, 01 Jul 2026 14:03:00 +0900</pubDate>
 				<guid>http://localhost:1313/docs/software/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9A%94%EA%B5%AC-%EC%82%AC%EC%96%91/</guid>
 				<description>&lt;p&gt;이 소프트웨어를 원활하게 구동하고 개발하기 위한 최소 및 권장 시스템 사양입니다.&lt;br&gt;&#xA;원활한 개발 프로세스 및 빌드 성능을 위해 가급적 &lt;strong&gt;권장 사양 이상&lt;/strong&gt;의 환경을 권장합니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-하드웨어-요구-사양&#34;&gt;🖥️ 하드웨어 요구 사양&lt;a class=&#34;anchor&#34; href=&#34;#-%ed%95%98%eb%93%9c%ec%9b%a8%ec%96%b4-%ec%9a%94%ea%b5%ac-%ec%82%ac%ec%96%91&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;구분&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;최소 사양 (Minimum)&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;권장 사양 (Recommended)&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;CPU&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;Intel Core i5 (8세대 이상) / AMD Ryzen 5&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;Apple Silicon (M1 이상) / Intel Core i7&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;RAM&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;8 GB&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;16 GB 이상&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;저장공간&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;5 GB 이상의 여유 공간 (HDD 가능)&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;20 GB 이상의 여유 공간 (SSD 필수)&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;네트워크&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;패키지 다운로드를 위한 인터넷 연결&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;기가비트 이더넷 / Wi-Fi 6&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;blockquote class=&#39;book-hint &#39;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;💡 권장 사양 메모:&lt;/strong&gt;&lt;br&gt;&#xA;프론트엔드 환경에서 &lt;code&gt;pnpm&lt;/code&gt; 빌드 및 로컬 테스트 서버를 동시에 구동하고, 백엔드 Docker 컨테이너까지 띄우려면 &lt;strong&gt;RAM 16 GB 이상&lt;/strong&gt;이 정신 건강에 좋습니다. 8 GB 환경에서는 스와프 영역 공간을 충분히 확보해 주세요.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>새로고침 하십시오</title>
+				<link>http://localhost:1313/docs/software/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8-%ED%95%98%EC%8B%AD%EC%8B%9C%EC%98%A4/</link>
+				<pubDate>Wed, 01 Jul 2026 16:01:00 +0900</pubDate>
+				<guid>http://localhost:1313/docs/software/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8-%ED%95%98%EC%8B%AD%EC%8B%9C%EC%98%A4/</guid>
+				<description>&lt;h2 id=&#34;새로고침-하십시오&#34;&gt;새로고침 하십시오&lt;a class=&#34;anchor&#34; href=&#34;#%ec%83%88%eb%a1%9c%ea%b3%a0%ec%b9%a8-%ed%95%98%ec%8b%ad%ec%8b%9c%ec%98%a4&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;새로고침 하십시오&lt;/p&gt;&#xA;&lt;p&gt;새로고침 하십시오&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
