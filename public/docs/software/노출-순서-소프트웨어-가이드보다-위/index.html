@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko-kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="이 문서는 프로젝트 구동에 필요한 기본 소프트웨어 및 의존성 패키지를 설치하는 가이드라인입니다.
+📦 의존성 패키지 설치#로컬 개발 환경 세팅을 위해 아래 명령어를 차례대로 실행해 주세요.
+# pnpm 환경 확인 pnpm --version # 프로젝트 의존성 모듈 설치 pnpm install --- ### 📄 2. `configuration.md` (두 번째 기준 문서) ```markdown --- title: &#34;환경 변수(Env) 설정 가이드&#34; date: 2026-07-02 weight: 20 --- 프로젝트가 백엔드 API 서버와 정상적으로 통신하기 위한 환경 변수 세팅 문서입니다. ## ⚙️ .env 설정 루트 디렉터리에 `.env.local` 파일을 생성하고 아래 서열대로 변수를 주입해 줍니다. ```env # API 서버 주소 NEXT_PUBLIC_API_URL=[https://api.densflo.dev](https://api.densflo.dev) # 개발 모드 디버깅 활성화 여부 NEXT_PUBLIC_DEBUG_MODE=true">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/software/%EB%85%B8%EC%B6%9C-%EC%88%9C%EC%84%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B3%B4%EB%8B%A4-%EC%9C%84/">
+	<meta property="og:site_name" content="가이드 문서">
+	<meta property="og:title" content="노출 순서 소프트웨어 가이드보다 위">
+	<meta property="og:description" content="이 문서는 프로젝트 구동에 필요한 기본 소프트웨어 및 의존성 패키지를 설치하는 가이드라인입니다.
+📦 의존성 패키지 설치#로컬 개발 환경 세팅을 위해 아래 명령어를 차례대로 실행해 주세요.
+# pnpm 환경 확인 pnpm --version # 프로젝트 의존성 모듈 설치 pnpm install --- ### 📄 2. `configuration.md` (두 번째 기준 문서) ```markdown --- title: &#34;환경 변수(Env) 설정 가이드&#34; date: 2026-07-02 weight: 20 --- 프로젝트가 백엔드 API 서버와 정상적으로 통신하기 위한 환경 변수 세팅 문서입니다. ## ⚙️ .env 설정 루트 디렉터리에 `.env.local` 파일을 생성하고 아래 서열대로 변수를 주입해 줍니다. ```env # API 서버 주소 NEXT_PUBLIC_API_URL=[https://api.densflo.dev](https://api.densflo.dev) # 개발 모드 디버깅 활성화 여부 NEXT_PUBLIC_DEBUG_MODE=true">
+	<meta property="og:locale" content="ko_kr">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+		<meta property="article:published_time" content="2026-07-01T14:43:00+09:00">
+		<meta property="article:modified_time" content="2026-07-01T14:43:00+09:00">
+
+
+	<meta itemprop="name" content="노출 순서 소프트웨어 가이드보다 위">
+	<meta itemprop="description" content="이 문서는 프로젝트 구동에 필요한 기본 소프트웨어 및 의존성 패키지를 설치하는 가이드라인입니다.
+📦 의존성 패키지 설치#로컬 개발 환경 세팅을 위해 아래 명령어를 차례대로 실행해 주세요.
+# pnpm 환경 확인 pnpm --version # 프로젝트 의존성 모듈 설치 pnpm install --- ### 📄 2. `configuration.md` (두 번째 기준 문서) ```markdown --- title: &#34;환경 변수(Env) 설정 가이드&#34; date: 2026-07-02 weight: 20 --- 프로젝트가 백엔드 API 서버와 정상적으로 통신하기 위한 환경 변수 세팅 문서입니다. ## ⚙️ .env 설정 루트 디렉터리에 `.env.local` 파일을 생성하고 아래 서열대로 변수를 주입해 줍니다. ```env # API 서버 주소 NEXT_PUBLIC_API_URL=[https://api.densflo.dev](https://api.densflo.dev) # 개발 모드 디버깅 활성화 여부 NEXT_PUBLIC_DEBUG_MODE=true">
+	<meta itemprop="datePublished" content="2026-07-01T14:43:00+09:00">
+	<meta itemprop="dateModified" content="2026-07-01T14:43:00+09:00">
+	<meta itemprop="wordCount" content="98">
+
+<title>노출 순서 소프트웨어 가이드보다 위 • 가이드 문서</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/software/%EB%85%B8%EC%B6%9C-%EC%88%9C%EC%84%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B3%B4%EB%8B%A4-%EC%9C%84/">
+<link rel="stylesheet" href="/book.min.88fb605ddb10b24fc59ff1b794801e25667fc5522697a48e79dab411ce930cf8.css" integrity="sha256-iPtgXdsQsk/Fn/G3lIAeJWZ/xVIml6SOedq0Ec6TDPg=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.5c94b3594468a51bb079d56bc713402b6e84f6910b51e8a753d60109c085a8cf.js" integrity="sha256-XJSzWURopRuwedVrxxNAK26E9pELUeinU9YBCcCFqM8=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+
+
+<h2 class="book-brand">
+  <a class="flex align-center" href="/docs/"><span>가이드 문서</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c56c54a5d240911fe584de064a9070d3" class="toggle" checked />
+    <label for="section-c56c54a5d240911fe584de064a9070d3" class="flex">
+      <a href="/docs/software/" class="">
+        소프트웨어 가이드</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/%EB%85%B8%EC%B6%9C-%EC%88%9C%EC%84%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B3%B4%EB%8B%A4-%EC%9C%84/" class="active">
+      노출 순서 소프트웨어 가이드보다 위</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9A%94%EA%B5%AC-%EC%82%AC%EC%96%91/" class="">
+      시스템 요구 사양</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/intro/" class="">
+      소프트웨어 시작하기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>노출 순서 소프트웨어 가이드보다 위</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-의존성-패키지-설치">📦 의존성 패키지 설치</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+    <article class="markdown book-article">
+    <div class="docs-content-header">
+        
+        
+         <div class="docs-breadcrumb">
+            <span class="parent-title">소프트웨어 가이드</span>
+            <span class="breadcrumb-separator">></span>
+            <span class="current-title">노출 순서 소프트웨어 가이드보다 위</span>
+        </div>
+        
+
+        <h1 class="docs-title">노출 순서 소프트웨어 가이드보다 위</h1>
+        
+        
+        <time class="docs-date">2026-07-01</time>
+        
+        
+        <hr class="docs-divider" />
+    </div><p>이 문서는 프로젝트 구동에 필요한 기본 소프트웨어 및 의존성 패키지를 설치하는 가이드라인입니다.</p>
+<h2 id="-의존성-패키지-설치">📦 의존성 패키지 설치<a class="anchor" href="#-%ec%9d%98%ec%a1%b4%ec%84%b1-%ed%8c%a8%ed%82%a4%ec%a7%80-%ec%84%a4%ec%b9%98">#</a></h2>
+<p>로컬 개발 환경 세팅을 위해 아래 명령어를 차례대로 실행해 주세요.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pnpm 환경 확인</span>
+</span></span><span style="display:flex;"><span>pnpm --version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 프로젝트 의존성 모듈 설치</span>
+</span></span><span style="display:flex;"><span>pnpm install
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 📄 2. `configuration.md` (두 번째 기준 문서)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>markdown
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: <span style="color:#e6db74">&#34;환경 변수(Env) 설정 가이드&#34;</span>
+</span></span><span style="display:flex;"><span>date: 2026-07-02
+</span></span><span style="display:flex;"><span>weight: <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>프로젝트가 백엔드 API 서버와 정상적으로 통신하기 위한 환경 변수 세팅 문서입니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## ⚙️ .env 설정</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>루트 디렉터리에 <span style="color:#e6db74">`</span>.env.local<span style="color:#e6db74">`</span> 파일을 생성하고 아래 서열대로 변수를 주입해 줍니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>env
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># API 서버 주소</span>
+</span></span><span style="display:flex;"><span>NEXT_PUBLIC_API_URL<span style="color:#f92672">=[</span>https://api.densflo.dev<span style="color:#f92672">](</span>https://api.densflo.dev<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 개발 모드 디버깅 활성화 여부</span>
+</span></span><span style="display:flex;"><span>NEXT_PUBLIC_DEBUG_MODE<span style="color:#f92672">=</span>true</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/software/intro/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>소프트웨어 시작하기</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/software/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9A%94%EA%B5%AC-%EC%82%AC%EC%96%91/" class="flex align-center">
+        <span>시스템 요구 사양</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-의존성-패키지-설치">📦 의존성 패키지 설치</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

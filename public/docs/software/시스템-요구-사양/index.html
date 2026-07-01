@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko-kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="이 소프트웨어를 원활하게 구동하고 개발하기 위한 최소 및 권장 시스템 사양입니다.
+원활한 개발 프로세스 및 빌드 성능을 위해 가급적 권장 사양 이상의 환경을 권장합니다.
+🖥️ 하드웨어 요구 사양#구분 최소 사양 (Minimum) 권장 사양 (Recommended) CPU Intel Core i5 (8세대 이상) / AMD Ryzen 5 Apple Silicon (M1 이상) / Intel Core i7 RAM 8 GB 16 GB 이상 저장공간 5 GB 이상의 여유 공간 (HDD 가능) 20 GB 이상의 여유 공간 (SSD 필수) 네트워크 패키지 다운로드를 위한 인터넷 연결 기가비트 이더넷 / Wi-Fi 6 💡 권장 사양 메모:
+프론트엔드 환경에서 pnpm 빌드 및 로컬 테스트 서버를 동시에 구동하고, 백엔드 Docker 컨테이너까지 띄우려면 RAM 16 GB 이상이 정신 건강에 좋습니다. 8 GB 환경에서는 스와프 영역 공간을 충분히 확보해 주세요.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/software/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9A%94%EA%B5%AC-%EC%82%AC%EC%96%91/">
+	<meta property="og:site_name" content="가이드 문서">
+	<meta property="og:title" content="시스템 요구 사양">
+	<meta property="og:description" content="이 소프트웨어를 원활하게 구동하고 개발하기 위한 최소 및 권장 시스템 사양입니다.
+원활한 개발 프로세스 및 빌드 성능을 위해 가급적 권장 사양 이상의 환경을 권장합니다.
+🖥️ 하드웨어 요구 사양#구분 최소 사양 (Minimum) 권장 사양 (Recommended) CPU Intel Core i5 (8세대 이상) / AMD Ryzen 5 Apple Silicon (M1 이상) / Intel Core i7 RAM 8 GB 16 GB 이상 저장공간 5 GB 이상의 여유 공간 (HDD 가능) 20 GB 이상의 여유 공간 (SSD 필수) 네트워크 패키지 다운로드를 위한 인터넷 연결 기가비트 이더넷 / Wi-Fi 6 💡 권장 사양 메모:
+프론트엔드 환경에서 pnpm 빌드 및 로컬 테스트 서버를 동시에 구동하고, 백엔드 Docker 컨테이너까지 띄우려면 RAM 16 GB 이상이 정신 건강에 좋습니다. 8 GB 환경에서는 스와프 영역 공간을 충분히 확보해 주세요.">
+	<meta property="og:locale" content="ko_kr">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+		<meta property="article:published_time" content="2026-07-01T14:03:00+09:00">
+		<meta property="article:modified_time" content="2026-07-01T14:03:00+09:00">
+
+
+	<meta itemprop="name" content="시스템 요구 사양">
+	<meta itemprop="description" content="이 소프트웨어를 원활하게 구동하고 개발하기 위한 최소 및 권장 시스템 사양입니다.
+원활한 개발 프로세스 및 빌드 성능을 위해 가급적 권장 사양 이상의 환경을 권장합니다.
+🖥️ 하드웨어 요구 사양#구분 최소 사양 (Minimum) 권장 사양 (Recommended) CPU Intel Core i5 (8세대 이상) / AMD Ryzen 5 Apple Silicon (M1 이상) / Intel Core i7 RAM 8 GB 16 GB 이상 저장공간 5 GB 이상의 여유 공간 (HDD 가능) 20 GB 이상의 여유 공간 (SSD 필수) 네트워크 패키지 다운로드를 위한 인터넷 연결 기가비트 이더넷 / Wi-Fi 6 💡 권장 사양 메모:
+프론트엔드 환경에서 pnpm 빌드 및 로컬 테스트 서버를 동시에 구동하고, 백엔드 Docker 컨테이너까지 띄우려면 RAM 16 GB 이상이 정신 건강에 좋습니다. 8 GB 환경에서는 스와프 영역 공간을 충분히 확보해 주세요.">
+	<meta itemprop="datePublished" content="2026-07-01T14:03:00+09:00">
+	<meta itemprop="dateModified" content="2026-07-01T14:03:00+09:00">
+	<meta itemprop="wordCount" content="185">
+
+<title>시스템 요구 사양 • 가이드 문서</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/software/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9A%94%EA%B5%AC-%EC%82%AC%EC%96%91/">
+<link rel="stylesheet" href="/book.min.88fb605ddb10b24fc59ff1b794801e25667fc5522697a48e79dab411ce930cf8.css" integrity="sha256-iPtgXdsQsk/Fn/G3lIAeJWZ/xVIml6SOedq0Ec6TDPg=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.5c94b3594468a51bb079d56bc713402b6e84f6910b51e8a753d60109c085a8cf.js" integrity="sha256-XJSzWURopRuwedVrxxNAK26E9pELUeinU9YBCcCFqM8=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+
+
+<h2 class="book-brand">
+  <a class="flex align-center" href="/docs/"><span>가이드 문서</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c56c54a5d240911fe584de064a9070d3" class="toggle" checked />
+    <label for="section-c56c54a5d240911fe584de064a9070d3" class="flex">
+      <a href="/docs/software/" class="">
+        소프트웨어 가이드</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/intro/" class="">
+      소프트웨어 시작하기</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/%EB%85%B8%EC%B6%9C-%EC%88%9C%EC%84%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B3%B4%EB%8B%A4-%EC%9C%84/" class="">
+      노출 순서 소프트웨어 가이드보다 위</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%9A%94%EA%B5%AC-%EC%82%AC%EC%96%91/" class="active">
+      시스템 요구 사양</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>시스템 요구 사양</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-하드웨어-요구-사양">🖥️ 하드웨어 요구 사양</a></li>
+    <li><a href="#-개발-툴-및-런타임-환경">🛠️ 개발 툴 및 런타임 환경</a>
+      <ul>
+        <li><a href="#1-런타임-nodejs">1. 런타임 (Node.js)</a></li>
+        <li><a href="#2-패키지-매니저-package-manager">2. 패키지 매니저 (Package Manager)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+    <article class="markdown book-article">
+    <div class="docs-content-header">
+        
+        
+         <div class="docs-breadcrumb">
+            <span class="parent-title">소프트웨어 가이드</span>
+            <span class="breadcrumb-separator">></span>
+            <span class="current-title">시스템 요구 사양</span>
+        </div>
+        
+
+        <h1 class="docs-title">시스템 요구 사양</h1>
+        
+        
+        <time class="docs-date">2026-07-01</time>
+        
+        
+        <hr class="docs-divider" />
+    </div><p>이 소프트웨어를 원활하게 구동하고 개발하기 위한 최소 및 권장 시스템 사양입니다.<br>
+원활한 개발 프로세스 및 빌드 성능을 위해 가급적 <strong>권장 사양 이상</strong>의 환경을 권장합니다.</p>
+<h2 id="-하드웨어-요구-사양">🖥️ 하드웨어 요구 사양<a class="anchor" href="#-%ed%95%98%eb%93%9c%ec%9b%a8%ec%96%b4-%ec%9a%94%ea%b5%ac-%ec%82%ac%ec%96%91">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">구분</th>
+					<th style="text-align: left">최소 사양 (Minimum)</th>
+					<th style="text-align: left">권장 사양 (Recommended)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>CPU</strong></td>
+					<td style="text-align: left">Intel Core i5 (8세대 이상) / AMD Ryzen 5</td>
+					<td style="text-align: left">Apple Silicon (M1 이상) / Intel Core i7</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>RAM</strong></td>
+					<td style="text-align: left">8 GB</td>
+					<td style="text-align: left"><strong>16 GB 이상</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>저장공간</strong></td>
+					<td style="text-align: left">5 GB 이상의 여유 공간 (HDD 가능)</td>
+					<td style="text-align: left"><strong>20 GB 이상의 여유 공간 (SSD 필수)</strong></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>네트워크</strong></td>
+					<td style="text-align: left">패키지 다운로드를 위한 인터넷 연결</td>
+					<td style="text-align: left">기가비트 이더넷 / Wi-Fi 6</td>
+			</tr>
+	</tbody>
+</table>
+<blockquote class='book-hint '>
+<p><strong>💡 권장 사양 메모:</strong><br>
+프론트엔드 환경에서 <code>pnpm</code> 빌드 및 로컬 테스트 서버를 동시에 구동하고, 백엔드 Docker 컨테이너까지 띄우려면 <strong>RAM 16 GB 이상</strong>이 정신 건강에 좋습니다. 8 GB 환경에서는 스와프 영역 공간을 충분히 확보해 주세요.</p>
+</blockquote><hr>
+<h2 id="-개발-툴-및-런타임-환경">🛠️ 개발 툴 및 런타임 환경<a class="anchor" href="#-%ea%b0%9c%eb%b0%9c-%ed%88%b4-%eb%b0%8f-%eb%9f%b0%ed%83%80%ec%9e%84-%ed%99%98%ea%b2%bd">#</a></h2>
+<p>원활한 프로젝트 구동을 위해 로컬 머신에 아래 런타임 버전을 맞춰주세요.</p>
+<h3 id="1-런타임-nodejs">1. 런타임 (Node.js)<a class="anchor" href="#1-%eb%9f%b0%ed%83%80%ec%9e%84-nodejs">#</a></h3>
+<ul>
+<li><strong>최소 사양</strong>: <code>Node.js v18.17.0</code> (이하 버전에서는 일부 API 지원 불가)</li>
+<li><strong>권장 사양</strong>: <code>Node.js v20.x</code> 혹은 <code>v22.x</code> (LTS 버전)</li>
+</ul>
+<h3 id="2-패키지-매니저-package-manager">2. 패키지 매니저 (Package Manager)<a class="anchor" href="#2-%ed%8c%a8%ed%82%a4%ec%a7%80-%eb%a7%a4%eb%8b%88%ec%a0%80-package-manager">#</a></h3>
+<ul>
+<li><strong>필수 사양</strong>: <code>pnpm v9.x</code> 이상 (<code>npm</code> 이나 <code>yarn</code> 빌드는 공식적으로 지원하지 않습니다.)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 로컬 Node.js 및 pnpm 버전 확인용 커맨드</span>
+</span></span><span style="display:flex;"><span>node -v
+</span></span><span style="display:flex;"><span>pnpm -v</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/software/%EB%85%B8%EC%B6%9C-%EC%88%9C%EC%84%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B3%B4%EB%8B%A4-%EC%9C%84/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>노출 순서 소프트웨어 가이드보다 위</span>
+      </a>
+    
+    </span>
+    <span>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#-하드웨어-요구-사양">🖥️ 하드웨어 요구 사양</a></li>
+    <li><a href="#-개발-툴-및-런타임-환경">🛠️ 개발 툴 및 런타임 환경</a>
+      <ul>
+        <li><a href="#1-런타임-nodejs">1. 런타임 (Node.js)</a></li>
+        <li><a href="#2-패키지-매니저-package-manager">2. 패키지 매니저 (Package Manager)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
