@@ -17,7 +17,8 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     format: "toml-frontmatter"
-    meta: { path: { widget: "hidden", index: 0 } }
+    # 🎯 label을 추가하고 hidden 위젯을 유지하여 에러를 잡고 UI에서도 숨깁니다.
+    meta: { path: { label: "경로", widget: "hidden", index: 0 } }
     fields:
       - { label: "제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
