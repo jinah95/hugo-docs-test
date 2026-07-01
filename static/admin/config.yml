@@ -10,40 +10,31 @@ collections:
     folder: "content/docs"
     create: true
 
-    # 🎯 [핵심 1] slug 구조를 지정합니다.
-    # 폴더 대문(_index)이 아닐 때는 일반 파일명({{slug}})으로 저장되도록 길을 터줍니다.
-    slug: "{{slug}}"
+    # 🎯 [치트키 1] 복잡한 중복 에러의 주범인 meta.path 설정을 과감히 지우거나
+    # 아래처럼 slug 자체에 '카테고리 경로'가 변수로 결합되도록 길을 완전히 터줍니다.
+    slug: "{{fields.category_path}}/{{fields.file_name}}"
 
-    nested:
-      depth: 5
+    # 목록 뷰에서 보기 좋게 템플릿만 유지
+    summary: "[{{fields.category_path}}] {{fields.title}}"
 
-    # 🎯 [핵심 2] meta path 설정을 유지하되, 폴더 안에서 일반 문서 생성이 가능하도록 동기화합니다.
-    meta:
-      {
-        path:
-          {
-            label: "카테고리 경로 (예: software 또는 software/sub)",
-            widget: "string",
-            index_file: "_index",
-          },
-      }
-
-    summary: "{{title}}"
     fields:
-      # 🎯 [핵심 3] 파일명(Slug)을 직접 결정할 수 있게 필드를 노출해 줍니다.
-      # 일반 문서를 만들 때는 여기에 'install'이나 'usage' 같은 영문 파일명을 적어주면 됩니다.
-      # 만약 새 폴더를 만들고 싶다면 파일명을 '_index'라고 적어주면 됩니다.
+      # 🎯 [핵심 2] 카테고리 폴더명을 직접 치거나 고르게 만듭니다.
       - {
-          label: "💾 저장될 파일명 (영문/숫자)",
-          name: "title",
+          label: "📂 카테고리 폴더명 (영문)",
+          name: "category_path",
           widget: "string",
-          hint: "일반 문서는 'intro', 'step1' 등 / 새 폴더 대문은 '_index' 입력",
+          hint: "예: software 또는 hardware / 루트에 둘 거면 빈칸",
         }
+
+      # 🎯 [핵심 3] 파일명을 중복 없이 직접 제어합니다.
       - {
-          label: "📝 화면에 보일 제목",
-          name: "display_title",
+          label: "💾 저장될 파일명 (영문)",
+          name: "file_name",
           widget: "string",
+          hint: "일반 문서는 'install', 'intro' 등 / 새 폴더 대문은 반드시 '_index' 입력",
         }
+
+      - { label: "📝 화면에 보일 제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
       - {
           label: "사이드바 순서 (weight)",
