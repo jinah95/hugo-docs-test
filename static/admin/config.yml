@@ -45,6 +45,22 @@ collections:
           value_type: "int",
           default: 10,
         }
+      - {
+          label: "📁 하위 문서 접기 (BookCollapseSection)",
+          name: "bookCollapseSection",
+          widget: "boolean",
+          default: true,
+          hint: "폴더 대문(_index)을 만들 때만 켜두세요.",
+        }
+
+      # 🎯 [치트키 2] 카테고리 볼드 이름표 옵션 기본값 활성화
+      - {
+          label: "✨ 카테고리 강조 스타일 (BookFlatSection)",
+          name: "bookFlatSection",
+          widget: "boolean",
+          default: true,
+          hint: "폴더 대문(_index)을 만들 때만 켜두세요.",
+        }
       - { label: "본문 내용", name: "body", widget: "markdown" }
 # collections:
 #   - name: "docs"
