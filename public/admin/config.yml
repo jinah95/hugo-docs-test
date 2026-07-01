@@ -9,33 +9,32 @@ collections:
     label: "📚 전체 가이드북 관리"
     folder: "content/docs"
     create: true
-    extension: "md"
-    format: "toml-frontmatter"
-
-    # 🎯 [치트키 1] 복잡한 중복 에러의 주범인 meta.path 설정을 과감히 지우거나
-    # 아래처럼 slug 자체에 '카테고리 경로'가 변수로 결합되도록 길을 완전히 터줍니다.
     slug: "{{fields.category_path}}/{{fields.file_name}}"
 
-    # 목록 뷰에서 보기 좋게 템플릿만 유지
-    summary: "[{{fields.category_path}}] {{fields.title}}"
+    # 🎯 [치트키] 목록 화면에 그룹 필터를 줍니다.
+    # 이렇게 해두면 목록 화면 왼쪽에 카테고리별로 필터링/그룹핑할 수 있는 UI가 생성됩니다!
+    view_groups:
+      - label: "📂 카테고리별 보기"
+        field: "category_path"
+        # 만약 루트(_index.md 등)를 따로 표시하고 싶다면 아래 패턴도 인식합니다.
+        # pattern: '(?P<value>.*)'
+
+    # 목록 뷰 텍스트도 좀 더 알아보기 쉽게 변경
+    summary: "[순서: {{fields.weight}}] {{fields.title}} (파일명: {{fields.file_name}})"
 
     fields:
-      # 🎯 [핵심 2] 카테고리 폴더명을 직접 치거나 고르게 만듭니다.
       - {
           label: "📂 카테고리 폴더명 (영문)",
           name: "category_path",
           widget: "string",
-          hint: "예: software 또는 hardware / 루트에 둘 거면 빈칸",
+          hint: "예: software, hardware, faq / 루트에 둘 거면 빈칸",
         }
-
-      # 🎯 [핵심 3] 파일명을 중복 없이 직접 제어합니다.
       - {
           label: "💾 저장될 파일명 (영문)",
           name: "file_name",
           widget: "string",
-          hint: "일반 문서는 'install', 'intro' 등 / 새 폴더 대문은 반드시 '_index' 입력",
+          hint: "일반 문서는 'install' 등 / 새 폴더 대문은 반드시 '_index' 입력",
         }
-
       - { label: "📝 화면에 보일 제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
       - {
@@ -50,16 +49,12 @@ collections:
           name: "bookCollapseSection",
           widget: "boolean",
           default: true,
-          hint: "폴더 대문(_index)을 만들 때만 켜두세요.",
         }
-
-      # 🎯 [치트키 2] 카테고리 볼드 이름표 옵션 기본값 활성화
       - {
           label: "✨ 카테고리 강조 스타일 (BookFlatSection)",
           name: "bookFlatSection",
           widget: "boolean",
           default: true,
-          hint: "폴더 대문(_index)을 만들 때만 켜두세요.",
         }
       - { label: "본문 내용", name: "body", widget: "markdown" }
 # collections:
