@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Jul 2026 09:44:00 +0900</lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 09:53:00 +0900</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/docs/software/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>소프트웨어 가이드 문서 입니다.</title>
+				<link>http://localhost:1313/docs/software/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</link>
+				<pubDate>Wed, 01 Jul 2026 09:53:00 +0900</pubDate>
+				<guid>http://localhost:1313/docs/software/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</guid>
+				<description>&lt;p&gt;소프트웨어 가이드 문서 입니다.소프트웨어 가이드 문서 입니다.소프트웨어 가이드 문서 입니다.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>반갑습니다 소프트웨어</title>
+				<link>http://localhost:1313/docs/software/%EB%B0%98%EA%B0%91%EC%8A%B5%EB%8B%88%EB%8B%A4-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/</link>
+				<pubDate>Wed, 01 Jul 2026 09:46:00 +0900</pubDate>
+				<guid>http://localhost:1313/docs/software/%EB%B0%98%EA%B0%91%EC%8A%B5%EB%8B%88%EB%8B%A4-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/</guid>
+				<description>&lt;p&gt;반갑습니다 소프트웨어&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>sofrtware</title>
 				<link>http://localhost:1313/docs/software/sofrtware/</link>
