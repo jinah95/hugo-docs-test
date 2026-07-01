@@ -1,7 +1,6 @@
 +++
 title = "가이드북 메인 페이지"
 date = 2026-07-01T09:00:00+09:00
-redirect_to = "https://jinah95.github.io/hugo-docs-test/docs/"
 +++
 
 ## 환영합니다! 👋
