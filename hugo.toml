@@ -1,5 +1,5 @@
 baseURL = 'https://jinah95.github.io/hugo-docs-test/'
-canonifyURLs = true
+relativeURLs = true
 languageCode = 'ko-kr'          # 한국어 설정
 title = '가이드 문서'     # 사이트 타이틀
 theme = 'hugo-book'             # 🎯 다운받은 테마 이름 지정!
