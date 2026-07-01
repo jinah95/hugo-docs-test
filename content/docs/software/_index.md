@@ -4,6 +4,7 @@ date = 2026-07-01T09:00:00+09:00
 weight = 20
 # 🎯 hugo-book 테마 전용 설정: 사이드바에서 이 메뉴를 접고 펼칠 수 있게 만듭니다.
 bookCollapseSection = true 
+bookFlatSection = true
 +++
 
 # 🖥️ 소프트웨어 설치 및 관리

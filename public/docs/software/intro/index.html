@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko-kr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="이 가이드는 프로젝트 소프트웨어 환경을 처음 세팅하는 개발자를 위한 문서입니다.
+아래 가이드를 따라 로컬 개발 환경을 구성해 보세요.
+Prerequisite (사전 준비)#설치를 진행하기 전에 아래 시스템 요구사항을 만족해야 합니다.
+Node.js: v20.x 이상 LTS (Recommended) Package Manager: pnpm v9.x 이상 🚀 빠른 시작 가이드#프로젝트 저장소를 클론하고 의존성 패키지를 설치합니다.
+# 1. 레포지토리 클론 git clone [https://github.com/your-repo/project-api.git](https://github.com/your-repo/project-api.git) # 2. 패키지 설치 pnpm install # 3. 로컬 서버 실행 pnpm dev 📄 2. usage.md (사용 방법 - 컴포넌트나 API 활용 문서)#본문 인용구(Blockquote)와 코드 블록 가독성을 아까 개선해 두었으니, 실제 API나 컴포넌트 가이드를 적을 때 비주얼이 기가 막히게 나옵니다.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/software/intro/">
+	<meta property="og:site_name" content="가이드 문서">
+	<meta property="og:title" content="소프트웨어 시작하기">
+	<meta property="og:description" content="이 가이드는 프로젝트 소프트웨어 환경을 처음 세팅하는 개발자를 위한 문서입니다.
+아래 가이드를 따라 로컬 개발 환경을 구성해 보세요.
+Prerequisite (사전 준비)#설치를 진행하기 전에 아래 시스템 요구사항을 만족해야 합니다.
+Node.js: v20.x 이상 LTS (Recommended) Package Manager: pnpm v9.x 이상 🚀 빠른 시작 가이드#프로젝트 저장소를 클론하고 의존성 패키지를 설치합니다.
+# 1. 레포지토리 클론 git clone [https://github.com/your-repo/project-api.git](https://github.com/your-repo/project-api.git) # 2. 패키지 설치 pnpm install # 3. 로컬 서버 실행 pnpm dev 📄 2. usage.md (사용 방법 - 컴포넌트나 API 활용 문서)#본문 인용구(Blockquote)와 코드 블록 가독성을 아까 개선해 두었으니, 실제 API나 컴포넌트 가이드를 적을 때 비주얼이 기가 막히게 나옵니다.">
+	<meta property="og:locale" content="ko_kr">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="docs">
+		<meta property="article:published_time" content="2026-07-01T09:44:00+09:00">
+		<meta property="article:modified_time" content="2026-07-01T09:44:00+09:00">
+
+
+	<meta itemprop="name" content="소프트웨어 시작하기">
+	<meta itemprop="description" content="이 가이드는 프로젝트 소프트웨어 환경을 처음 세팅하는 개발자를 위한 문서입니다.
+아래 가이드를 따라 로컬 개발 환경을 구성해 보세요.
+Prerequisite (사전 준비)#설치를 진행하기 전에 아래 시스템 요구사항을 만족해야 합니다.
+Node.js: v20.x 이상 LTS (Recommended) Package Manager: pnpm v9.x 이상 🚀 빠른 시작 가이드#프로젝트 저장소를 클론하고 의존성 패키지를 설치합니다.
+# 1. 레포지토리 클론 git clone [https://github.com/your-repo/project-api.git](https://github.com/your-repo/project-api.git) # 2. 패키지 설치 pnpm install # 3. 로컬 서버 실행 pnpm dev 📄 2. usage.md (사용 방법 - 컴포넌트나 API 활용 문서)#본문 인용구(Blockquote)와 코드 블록 가독성을 아까 개선해 두었으니, 실제 API나 컴포넌트 가이드를 적을 때 비주얼이 기가 막히게 나옵니다.">
+	<meta itemprop="datePublished" content="2026-07-01T09:44:00+09:00">
+	<meta itemprop="dateModified" content="2026-07-01T09:44:00+09:00">
+	<meta itemprop="wordCount" content="322">
+
+<title>소프트웨어 시작하기 • 가이드 문서</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/software/intro/">
+<link rel="stylesheet" href="/book.min.88fb605ddb10b24fc59ff1b794801e25667fc5522697a48e79dab411ce930cf8.css" integrity="sha256-iPtgXdsQsk/Fn/G3lIAeJWZ/xVIml6SOedq0Ec6TDPg=" crossorigin="anonymous">
+
+
+  <script defer type="module" src="/en.search.min.cc24f00c046a1230280e0a32ab27f2141dc9a3af504325d0c80fb8713139b319.js" integrity="sha256-zCTwDARqEjAoDgoyqyfyFB3Jo69QQyXQyA&#43;4cTE5sxk=" crossorigin="anonymous"></script>
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+
+
+<h2 class="book-brand">
+  <a class="flex align-center" href="/docs/"><span>가이드 문서</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Search"
+    aria-label="Search"
+    maxlength="64" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c56c54a5d240911fe584de064a9070d3" class="toggle" checked />
+    <label for="section-c56c54a5d240911fe584de064a9070d3" class="flex">
+      <a href="/docs/software/" class="">
+        소프트웨어 가이드</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/software/intro/" class="active">
+      소프트웨어 시작하기</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>소프트웨어 시작하기</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisite-사전-준비">Prerequisite (사전 준비)</a></li>
+    <li><a href="#-빠른-시작-가이드">🚀 빠른 시작 가이드</a>
+      <ul>
+        <li><a href="#-2-usagemd-사용-방법---컴포넌트나-api-활용-문서">📄 2. <code>usage.md</code> (사용 방법 - 컴포넌트나 API 활용 문서)</a></li>
+        <li><a href="#-3-troubleshootingmd-트러블슈팅---꿀팁-및-에러-해결-가이드">📄 3. <code>troubleshooting.md</code> (트러블슈팅 - 꿀팁 및 에러 해결 가이드)</a></li>
+        <li><a href="#-꿀팁-문서-순서-정렬하기-weight">💡 꿀팁: 문서 순서 정렬하기 (<code>weight</code>)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+    <article class="markdown book-article">
+    <div class="docs-content-header">
+        
+        
+         <div class="docs-breadcrumb">
+            <span class="parent-title">소프트웨어 가이드</span>
+            <span class="breadcrumb-separator">></span>
+            <span class="current-title">소프트웨어 시작하기</span>
+        </div>
+        
+
+        <h1 class="docs-title">소프트웨어 시작하기</h1>
+        
+        
+        <time class="docs-date">2026-07-01</time>
+        
+        
+        <hr class="docs-divider" />
+    </div><p>이 가이드는 프로젝트 소프트웨어 환경을 처음 세팅하는 개발자를 위한 문서입니다.<br>
+아래 가이드를 따라 로컬 개발 환경을 구성해 보세요.</p>
+<h2 id="prerequisite-사전-준비">Prerequisite (사전 준비)<a class="anchor" href="#prerequisite-%ec%82%ac%ec%a0%84-%ec%a4%80%eb%b9%84">#</a></h2>
+<p>설치를 진행하기 전에 아래 시스템 요구사항을 만족해야 합니다.</p>
+<ul>
+<li><strong>Node.js</strong>: v20.x 이상 LTS (Recommended)</li>
+<li><strong>Package Manager</strong>: pnpm v9.x 이상</li>
+</ul>
+<hr>
+<h2 id="-빠른-시작-가이드">🚀 빠른 시작 가이드<a class="anchor" href="#-%eb%b9%a0%eb%a5%b8-%ec%8b%9c%ec%9e%91-%ea%b0%80%ec%9d%b4%eb%93%9c">#</a></h2>
+<p>프로젝트 저장소를 클론하고 의존성 패키지를 설치합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 레포지토리 클론</span>
+</span></span><span style="display:flex;"><span>git clone <span style="color:#f92672">[</span>https://github.com/your-repo/project-api.git<span style="color:#f92672">](</span>https://github.com/your-repo/project-api.git<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 패키지 설치</span>
+</span></span><span style="display:flex;"><span>pnpm install
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 로컬 서버 실행</span>
+</span></span><span style="display:flex;"><span>pnpm dev</span></span></code></pre></div><hr>
+<h3 id="-2-usagemd-사용-방법---컴포넌트나-api-활용-문서">📄 2. <code>usage.md</code> (사용 방법 - 컴포넌트나 API 활용 문서)<a class="anchor" href="#-2-usagemd-%ec%82%ac%ec%9a%a9-%eb%b0%a9%eb%b2%95---%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8%eb%82%98-api-%ed%99%9c%ec%9a%a9-%eb%ac%b8%ec%84%9c">#</a></h3>
+<p>본문 인용구(Blockquote)와 코드 블록 가독성을 아까 개선해 두었으니, 실제 API나 컴포넌트 가이드를 적을 때 비주얼이 기가 막히게 나옵니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;API 및 컴포넌트 활용법&#34;
+</span></span><span style="display:flex;"><span>date: 2026-07-02
+</span></span><span style="display:flex;"><span>weight: 20
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>공통 리포트 공유 컴포넌트와 API 서버를 연동하는 핵심 가이드라인입니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 🛠️ State 관리 가이드
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>프론트엔드에서 데이터 패칭 및 상태 관리는 <span style="color:#e6db74">`TanStack Query`</span>를 기본으로 사용합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```typescript
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useQuery</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@tanstack/react-query&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">fetchReportData</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@/api/report&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">useReportQuery</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">reportId</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">useQuery</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">queryKey</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;report&#34;</span>, <span style="color:#a6e22e">reportId</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">queryFn</span><span style="color:#f92672">:</span> () <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">fetchReportData</span>(<span style="color:#a6e22e">reportId</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">enabled</span><span style="color:#f92672">:</span> <span style="color:#f92672">!!</span><span style="color:#a6e22e">reportId</span>,
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span></span></span></code></pre></div><hr>
+<h3 id="-3-troubleshootingmd-트러블슈팅---꿀팁-및-에러-해결-가이드">📄 3. <code>troubleshooting.md</code> (트러블슈팅 - 꿀팁 및 에러 해결 가이드)<a class="anchor" href="#-3-troubleshootingmd-%ed%8a%b8%eb%9f%ac%eb%b8%94%ec%8a%88%ed%8c%85---%ea%bf%80%ed%8c%81-%eb%b0%8f-%ec%97%90%eb%9f%ac-%ed%95%b4%ea%b2%b0-%ea%b0%80%ec%9d%b4%eb%93%9c">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;자주 묻는 질문 &amp; 트러블슈팅&#34;
+</span></span><span style="display:flex;"><span>date: 2026-07-03
+</span></span><span style="display:flex;"><span>weight: 30
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>개발 및 운영 환경에서 발생할 수 있는 주요 빌드 억까와 해결 방법 모음입니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 🚨 에러 발생 시 대처법
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">### 1. 빌드 타임에 타입 에러가 터지는 경우
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TypeScript 컴파일러가 새로 추가된 파일의 타입을 인지하지 못할 때 발생합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **원인**: 디렉터리 경로 변경 후 캐시가 꼬임
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> **해결책**: <span style="color:#e6db74">`.next`</span> 또는 <span style="color:#e6db74">`.hugo`</span> 캐시 폴더를 완전히 밀어버리고 다시 빌드 프로세스를 슛합니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># 캐시 폴더 삭제 후 재실행</span>
+</span></span><span style="display:flex;"><span>rm -rf .next
+</span></span><span style="display:flex;"><span>pnpm dev
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span></span></span></code></pre></div><hr>
+<h3 id="-꿀팁-문서-순서-정렬하기-weight">💡 꿀팁: 문서 순서 정렬하기 (<code>weight</code>)<a class="anchor" href="#-%ea%bf%80%ed%8c%81-%eb%ac%b8%ec%84%9c-%ec%88%9c%ec%84%9c-%ec%a0%95%eb%a0%ac%ed%95%98%ea%b8%b0-weight">#</a></h3>
+<p>각 마크다운 파일 맨 위(Front Matter)에 <strong><code>weight = 10</code></strong>, <strong><code>weight = 20</code></strong> 처럼 숫자를 지정해 둔 게 보이실 겁니다.
+Hugo는 사이드바 메뉴를 나열할 때 이 <code>weight</code> 값이 <strong>작은 순서부터 정렬</strong>해 줍니다.</p>
+<p>이렇게 지정해 두면 파일명이 알파벳 순서대로 꼬이지 않고, 개발자님이 의도한 순서대로 사이드바에 이쁘게 안착할 겁니다. 마크다운 파일 생성해서 새로고침 해보시고, 완벽하게 빌드되는 쾌감을 즐겨보세요! 💻🔥🚀</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/software/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>소프트웨어 가이드</span>
+      </a>
+    
+    </span>
+    <span>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisite-사전-준비">Prerequisite (사전 준비)</a></li>
+    <li><a href="#-빠른-시작-가이드">🚀 빠른 시작 가이드</a>
+      <ul>
+        <li><a href="#-2-usagemd-사용-방법---컴포넌트나-api-활용-문서">📄 2. <code>usage.md</code> (사용 방법 - 컴포넌트나 API 활용 문서)</a></li>
+        <li><a href="#-3-troubleshootingmd-트러블슈팅---꿀팁-및-에러-해결-가이드">📄 3. <code>troubleshooting.md</code> (트러블슈팅 - 꿀팁 및 에러 해결 가이드)</a></li>
+        <li><a href="#-꿀팁-문서-순서-정렬하기-weight">💡 꿀팁: 문서 순서 정렬하기 (<code>weight</code>)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

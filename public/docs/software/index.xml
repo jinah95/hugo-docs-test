@@ -10,43 +10,15 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Jul 2026 09:53:00 +0900</lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 09:44:00 +0900</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/docs/software/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>소프트웨어 가이드 문서 입니다.</title>
-				<link>http://localhost:1313/docs/software/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</link>
-				<pubDate>Wed, 01 Jul 2026 09:53:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/software/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</guid>
-				<description>&lt;p&gt;소프트웨어 가이드 문서 입니다.소프트웨어 가이드 문서 입니다.소프트웨어 가이드 문서 입니다.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>반갑습니다 소프트웨어</title>
-				<link>http://localhost:1313/docs/software/%EB%B0%98%EA%B0%91%EC%8A%B5%EB%8B%88%EB%8B%A4-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/</link>
-				<pubDate>Wed, 01 Jul 2026 09:46:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/software/%EB%B0%98%EA%B0%91%EC%8A%B5%EB%8B%88%EB%8B%A4-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/</guid>
-				<description>&lt;p&gt;반갑습니다 소프트웨어&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>sofrtware</title>
-				<link>http://localhost:1313/docs/software/sofrtware/</link>
+				<title>소프트웨어 시작하기</title>
+				<link>http://localhost:1313/docs/software/intro/</link>
 				<pubDate>Wed, 01 Jul 2026 09:44:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/software/sofrtware/</guid>
-				<description>&lt;p&gt;software&amp;hellip;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>안녕하세요22</title>
-				<link>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%9422/</link>
-				<pubDate>Wed, 01 Jul 2026 09:37:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%9422/</guid>
-				<description>&lt;p&gt;안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>안녕하세요</title>
-				<link>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/</link>
-				<pubDate>Wed, 01 Jul 2026 09:07:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/</guid>
-				<description>&lt;p&gt;경로를 지정했나요?&lt;/p&gt;</description>
+				<guid>http://localhost:1313/docs/software/intro/</guid>
+				<description>&lt;p&gt;이 가이드는 프로젝트 소프트웨어 환경을 처음 세팅하는 개발자를 위한 문서입니다.&lt;br&gt;&#xA;아래 가이드를 따라 로컬 개발 환경을 구성해 보세요.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisite-사전-준비&#34;&gt;Prerequisite (사전 준비)&lt;a class=&#34;anchor&#34; href=&#34;#prerequisite-%ec%82%ac%ec%a0%84-%ec%a4%80%eb%b9%84&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;설치를 진행하기 전에 아래 시스템 요구사항을 만족해야 합니다.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt;: v20.x 이상 LTS (Recommended)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Package Manager&lt;/strong&gt;: pnpm v9.x 이상&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-빠른-시작-가이드&#34;&gt;🚀 빠른 시작 가이드&lt;a class=&#34;anchor&#34; href=&#34;#-%eb%b9%a0%eb%a5%b8-%ec%8b%9c%ec%9e%91-%ea%b0%80%ec%9d%b4%eb%93%9c&#34;&gt;#&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;프로젝트 저장소를 클론하고 의존성 패키지를 설치합니다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 1. 레포지토리 클론&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;https://github.com/your-repo/project-api.git&lt;span style=&#34;color:#f92672&#34;&gt;](&lt;/span&gt;https://github.com/your-repo/project-api.git&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 2. 패키지 설치&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm install&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 3. 로컬 서버 실행&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pnpm dev&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-2-usagemd-사용-방법---컴포넌트나-api-활용-문서&#34;&gt;📄 2. &lt;code&gt;usage.md&lt;/code&gt; (사용 방법 - 컴포넌트나 API 활용 문서)&lt;a class=&#34;anchor&#34; href=&#34;#-2-usagemd-%ec%82%ac%ec%9a%a9-%eb%b0%a9%eb%b2%95---%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8%eb%82%98-api-%ed%99%9c%ec%9a%a9-%eb%ac%b8%ec%84%9c&#34;&gt;#&lt;/a&gt;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;본문 인용구(Blockquote)와 코드 블록 가독성을 아까 개선해 두었으니, 실제 API나 컴포넌트 가이드를 적을 때 비주얼이 기가 막히게 나옵니다.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
