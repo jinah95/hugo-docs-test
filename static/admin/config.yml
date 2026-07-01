@@ -8,12 +8,13 @@ collections:
   - name: "docs"
     label: "가이드 문서 관리"
     folder: "content/docs"
+    create: true
     # 트리 구조(중첩 경로) 활성화
     type: "nested"
     # 새 문서 추가 시 저장될 경로 파일 규칙 지정
-    path: "{{dir}}/{{slug}}"
-    create: true
+    path: "{{dir}}/{{slug}}/index"
     slug: "{{slug}}"
+    extension: "md"
     format: "toml-frontmatter"
     fields:
       - { label: "제목", name: "title", widget: "string" }
