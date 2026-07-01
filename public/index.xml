@@ -14,13 +14,6 @@
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>메인 가이드 문서 입니다</title>
-				<link>http://localhost:1313/docs/%EB%A9%94%EC%9D%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</link>
-				<pubDate>Wed, 01 Jul 2026 09:53:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/%EB%A9%94%EC%9D%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</guid>
-				<description>&lt;p&gt;메인 가이드 문서 입니다메인 가이드 문서 입니다&lt;/p&gt;</description>
-			</item>
-			<item>
 				<title>소프트웨어 가이드 문서 입니다.</title>
 				<link>http://localhost:1313/docs/software/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%AC%B8%EC%84%9C-%EC%9E%85%EB%8B%88%EB%8B%A4/</link>
 				<pubDate>Wed, 01 Jul 2026 09:53:00 +0900</pubDate>
@@ -47,13 +40,6 @@
 				<pubDate>Wed, 01 Jul 2026 09:37:00 +0900</pubDate>
 				<guid>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%9422/</guid>
 				<description>&lt;p&gt;안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>안녕하세요</title>
-				<link>http://localhost:1313/docs/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/</link>
-				<pubDate>Wed, 01 Jul 2026 09:28:00 +0900</pubDate>
-				<guid>http://localhost:1313/docs/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/</guid>
-				<description>&lt;p&gt;ㅎㅈㄷㅎㅈㄷㅎㅈㄷㅎ&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>안녕하세요</title>
