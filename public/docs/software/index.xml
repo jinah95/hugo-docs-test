@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Jul 2026 09:07:00 +0900</lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 09:37:00 +0900</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/docs/software/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>안녕하세요22</title>
+				<link>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%9422/</link>
+				<pubDate>Wed, 01 Jul 2026 09:37:00 +0900</pubDate>
+				<guid>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%9422/</guid>
+				<description>&lt;p&gt;안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>안녕하세요</title>
 				<link>http://localhost:1313/docs/software/%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94/</link>
