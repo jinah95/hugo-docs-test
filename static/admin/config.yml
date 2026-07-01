@@ -10,23 +10,24 @@ collections:
     folder: "content/docs"
     create: true
     # 트리 구조(중첩 경로) 활성화
-    type: "nested"
-    nested:
-      depth: 5 # 최대 5단계 하위 폴더까지 트리로 표시하겠다는 설정
-    path: "{{dir}}/{{slug}}"
+    nested: { depth: 1 }
+    path: "{{slug}}"
     slug: "{{slug}}"
     extension: "md"
     format: "toml-frontmatter"
-    # 🎯 label을 추가하고 hidden 위젯을 유지하여 에러를 잡고 UI에서도 숨깁니다.
-    meta: { path: { label: "경로", widget: "hidden", index: 0 } }
+    fields:
+      - { label: "제목", name: "title", widget: "string" }
+      - { label: "작성일자", name: "date", widget: "datetime" }
+      - { label: "본문 내용", name: "body", widget: "markdown" }
 
-    view_filters:
-      - label: "소프트웨어 가이드"
-        field: "path" # Decap CMS가 파일의 내부 경로를 추적합니다.
-        pattern: "software" # 경로에 'software'가 포함된 녀석들만 이 목록에 띄웁니다.
-      - label: "루트 문서만 보기"
-        field: "path"
-        pattern: "^[^/]+$" # 하위 폴더 없이 docs 루트에 바로 있는 글들만 필터링
+  - name: "docs_software"
+    label: "소프트웨어 가이드"
+    folder: "content/docs/software" # 🎯 타겟 폴더를 software 내부로 고정!
+    create: true
+    path: "{{slug}}"
+    slug: "{{slug}}"
+    extension: "md"
+    format: "toml-frontmatter"
     fields:
       - { label: "제목", name: "title", widget: "string" }
       - { label: "작성일자", name: "date", widget: "datetime" }
