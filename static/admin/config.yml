@@ -2,8 +2,8 @@ backend:
   name: github
   repo: jinah95/hugo-docs-test
   branch: main
-  # Netlify 서버 대신, 깃허브 페이지스 전용 무료 인증 서버 주소를 주입합니다!
-  base_url: https://decap-cms-oauth-provider.vercel.app
+  auth_type: implicit
+  app_id: Ov23liUQmlwPSjvOHOxg
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
