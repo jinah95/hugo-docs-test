@@ -40,11 +40,6 @@ jobs:
       - name: Run Hugo Build
         run: hugo --gc --minify # 🚀 가비지 컬렉터를 돌리고 코드를 압축(Minify)하여 정적 파일을 빌드합니다.
 
-      # 🎯 [추가] 빌드가 끝나자마자 모든 HTML 맨 밑에 커밋 해시 주석을 강제 주입하여 CDN 캐시를 파괴합니다.
-      - name: CDN Cache Busting for HTML files
-        run: |
-          find public -name "*.html" -exec sed -i "s|</html>|</html>|g" {} +
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
