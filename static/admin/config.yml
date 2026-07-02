@@ -2,8 +2,6 @@ backend:
   name: github
   repo: jinah95/hugo-docs-test
   branch: main
-  auth_type: implicit
-  app_id: Ov23liUQmlwPSjvOHOxg
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
