@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jinah95/hugo-docs-test
   branch: main
-  base_url: https://decap-proxy.jinah95.workers.dev
+  base_url: https://hugo-docs-test.jinah95.workers.dev/
   auth_endpoint: /auth
 media_folder: "static/uploads"
 public_folder: "/uploads"
