@@ -1,0 +1,121 @@
+/*
+  You can add custom styles here.
+  It could be plugins:
+    @import "plugins/numbered";
+    @import "plugins/scrollbars";
+    @import "plugins/themes";
+  Or custom styles:
+    body { background: white; }
+  Or even theme mixins:
+    @mixin theme-light {
+      --body-background: white;
+      --body-font-color: black;
+      ...
+    }
+*/
+
+/* ────────────────────────────────────────────────────────
+   📱 모바일 상단 바(book-header) 중복 타이틀 제거
+   ──────────────────────────────────────────────────────── */
+
+/* 모바일 상단 바 내부의 h3 타이틀만 저격해서 깔끔하게 숨깁니다. */
+.book-header h3 {
+  display: none;
+}
+
+/* 양쪽 아이콘(햄버거, TOC)만 정렬되도록 레이아웃 공간을 가득 채웁니다. */
+.book-header .flex.align-center.justify-between {
+  width: 100%;
+}
+
+/* ────────────────────────────────────────────────────────
+   🖥️ 본문 공통 타이틀 & 데이트 (Docs 스타일링)
+   ──────────────────────────────────────────────────────── */
+
+/* 타이틀과 날짜를 감싸는 헤더 영역 여백 */
+.docs-content-header {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 1. 문서 메인 제목 (안녕하세요) */
+.docs-title {
+  font-size: 2.5rem !important; /* 기술 문서 정석의 큼직한 크기 */
+  font-weight: 850 !important; /* 확실한 볼드감 */
+  color: #1a202c !important; /* 깊이감 있는 다크 그레이 */
+  line-height: 1.2 !important;
+  margin: 0 0 0.5rem 0 !important; /* 하단 메타데이터와의 자간 조정 */
+  letter-spacing: -0.03em !important; /* 자간을 살짝 좁혀서 트렌디하게 */
+}
+
+/* 2. 작성 일자 (날짜) */
+.docs-date {
+  display: block !important;
+  font-size: 0.9rem !important;
+  color: #718096 !important; /* 은은하고 고급스러운 회색조 */
+  margin-bottom: 1.25rem !important; /* 구분선과의 여백 */
+  font-weight: 500 !important;
+}
+
+/* 3. 상단 구분선 (------) */
+.docs-divider {
+  border: 0 !important;
+  height: 2px !important;
+  background-color: #e2e8f0 !important; /* 토스나 Toss 가이드풍의 세련된 라이트 그레이 */
+  margin: 0 !important;
+}
+
+/* ────────────────────────────────────────────────────────
+   💡 가이드 문서 본문 가독성 추가 업그레이드 (선택사항)
+   ──────────────────────────────────────────────────────── */
+
+/* 본문 인용구(Blockquote) - 팁이나 경고 문구 강조용 */
+.book-article blockquote {
+  background-color: #f7fafc !important;
+  border-left: 4px solid #3182ce !important; /* 산뜻한 블루 포인트 라인 */
+  color: #4a5568 !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 0 6px 6px 0 !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* 본문 인라인 코드 가독성 개선 */
+.book-article code:not(pre code) {
+  background-color: #edf2f7 !important;
+  color: #2d3748 !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 4px !important;
+  font-size: 0.9em !important;
+}
+
+/* ────────────────────────────────────────────────────────
+   📍 상단 브레드크럼 경로 스타일링 (폴더 > 제목)
+   ──────────────────────────────────────────────────────── */
+
+.docs-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 글자 사이 간격 */
+  font-size: 0.85rem !important; /* 메인 제목보다 작고 정갈하게 */
+  font-weight: 500 !important;
+  color: #a0aec0 !important; /* 차분한 연회색 */
+  margin-bottom: 0.5rem !important; /* 메인 제목과의 여백 */
+}
+
+/* 부모 경로 (예: 소프트웨어 가이드) */
+.parent-title {
+  color: #718096 !important; /* 부모 경로는 살짝 더 진하게 해서 강조 */
+  cursor: default;
+}
+
+/* 구분자 ( > ) */
+.breadcrumb-separator {
+  color: #cbd5e0 !important; /* 화살표는 더 연하게 처리 */
+  user-select: none;
+}
+
+/* 현재 문서 제목 (생략 가능하지만 가독성을 위해 흐리게 처리) */
+.docs-breadcrumb .current-title {
+  font-weight: 600 !important;
+  color: #2d3748 !important; /* 현재 문서는 조금 더 진하게 */
+}
