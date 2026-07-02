@@ -15,3 +15,7 @@ theme = 'hugo-book'             # 🎯 다운받은 테마 이름 지정!
 
 [action]
   disablePathToLower = false  
+
+# js, scss 에는 난수화가 가능하지만, HTML파일 자체는 브라우저 자체 캐싱을 꺾기가 어려움 - 파일명 자체가 경로기 때문에
+[params]
+  bookFastNavigation = false
